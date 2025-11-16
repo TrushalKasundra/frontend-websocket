@@ -1,0 +1,131 @@
+@import "./connectionManager.css";
+
+
+.wrapper{
+  display:flex ;
+  align-items: center;
+  justify-content:center ;
+  width: 100%;
+}
+
+.wrapper .join_room, .wrapper .chat{
+  background-color: aquamarine;
+  margin: 1rem;
+  padding: 1rem;
+  align-content: center;
+}
+
+.wrapper .chat{
+  width: 80%;
+  /* margin-left: 50%;
+    transform: translate(-50%, 0); */
+}
+.wrapper .chat .messageList{
+  height: 22rem;  
+  background-color: aliceblue;
+  margin-left: 50%;
+  width:100%;
+  margin-bottom: 1rem;
+  transform: translate(-50%, 0);
+}
+.wrapper .chat form{
+  width:max-content;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+.chat input{
+  height: 40px;
+  width: 350px;
+  border: 1px solid rgb(78, 78, 73);
+}
+
+.chat input::placeholder{
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 5px;
+  height: 46px;
+}
+.chat button{
+  height: 46px;
+  margin-left: 5px;
+  width: 50px;
+  background-color: rgb(127, 19, 229);
+  color: white;
+}
+
+
+.wrapper .join_room{
+
+  input, buttton{
+    height: 20px;
+  }
+  input{
+    margin: 1rem;
+    height: 40px;
+    width: 350px;
+    border: 1px solid rgb(78, 78, 73);
+  }
+  button{
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    height: 46px;
+    font-size: 1rem;
+    /* padding: 10px; */
+    /* margin-left: 5px; */
+    /* width: 50px; */
+    background-color: rgb(127, 19, 229);
+    color: white;
+  }
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+.messageList{
+  padding: 0;
+  overflow:auto;
+}
+.message-user-box{
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  line-break: anywhere;
+}
+.message-other-box{
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  line-break: anywhere;
+}
+.messageList .message-user{
+  width:50%;
+  max-width: 80%;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  background-color: rgb(167, 238, 167);
+}
+.messageList .message-user::before {
+  border-bottom: 10px solid var(--logoBlue);
+  right: -8px;
+  content: "";
+  height: 10px;
+  width:8px
+}
+.messageList .message-other{
+  width:50%;
+  max-width: 80%;
+
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  background-color: rgb(228, 238, 200);
+  
+}
+.messageList .message-other::before {
+  border-bottom: 10px solid var(--logoBlue);
+  right: -8px;
+  content: "";
+  height: 10px;
+  width:8px
+}
+.message-other .author{
+  opacity: 50%;
+}
