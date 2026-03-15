@@ -14,9 +14,6 @@ const ChatUser = () => {
 
     const userName = localStorage.getItem("userName");
 
-
-    console.log("dsf",userName,username)
-
     const joinChat = () => {
         if (username !== "" && room !== "") {
             try {

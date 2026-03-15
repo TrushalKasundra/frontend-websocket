@@ -20,7 +20,7 @@ const Home = () => {
     // Copy the text inside the text field
     if (copyText.value && navigator.clipboard) {
       
-      navigator.clipboard.writeText(`http://192.168.1.143:5252/${copyText.value}`);
+      navigator.clipboard.writeText(`${process.env.REACT_APP_ORIGIN_URL}/${copyText.value}`);
     }
   }
 
@@ -50,7 +50,7 @@ const Home = () => {
           placeholder="Create Room url"
           onChange={(e) => setRoom(e.target.value)}
         />
-        <div>http://192.168.1.143:5252/{room}<button onClick={copyToClipboard}>Copy LInk</button></div>
+        <div>{process.env.REACT_APP_ORIGIN_URL}/{room}<button onClick={copyToClipboard}>Copy LInk</button></div>
         <div><button onClick={createRoom}>Create Room</button></div>        
       </div>
     </div>
